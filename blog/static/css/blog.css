@@ -62,10 +62,6 @@ h1, h2, h3, h4 {
     margin-bottom: 100px;
 }
 
-.post_publish, .post_edit, .post_remove {
-    color: #CECEF6;
-}
-
 .comment {
     margin: 20px 0px 20px 20px;
 }
