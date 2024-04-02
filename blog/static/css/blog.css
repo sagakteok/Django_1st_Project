@@ -1,0 +1,75 @@
+.page-header {
+    background-color: #8258FA;
+    margin-top: 0;
+    padding: 20px 20px 50px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-family: "Faster One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 55pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Changa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 40pt;
+    font-style: normal;
+}
+
+.date {
+    font-family: "Changa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 17pt;
+    font-style: normal;
+    color: #8181F7;
+}
+
+.save {
+    font-family: "Changa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 17pt;
+    font-style: normal;
+    color: #8181F7;
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #CECEF6;
+    font-family: "Changa", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    float: right;
+    font-size: 17pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 100px;
+}
+
+.post_publish, .post_edit, .post_remove {
+    color: #CECEF6;
+}
+
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #29088A;
+}
