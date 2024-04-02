@@ -1,9 +1,26 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 from .models import Post, Comment
-from .forms import PostForm, CommentForm
+from .forms import PostForm, CommentForm, UserForm
 from django.shortcuts import redirect
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+
+def signup(request):
+    if request.method == "POST":
+        form = UserForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get("username")
+            row_password = form.cleaned_data.get("password1")
+            # 사용자 인증 담당 : 아이디와 비밀번호가 DB랑 같은지 비교
+            user = authenticate(username=username , password=row_password)
+            # 로그인 담당 : 사용자에게 입력받은 request와 인증기록인 user를 통해 로그인 허용 또는 거부
+            login(request, user)
+            return redirect("index")
+    else: # Get 요청일 떄
+        form = UserForm()
+    return render(request, "registration/signup.html", {"form": form})
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
